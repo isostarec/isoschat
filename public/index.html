@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  <script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="/js/socket.io.js"></script>
+
+  <title>Chat App</title>
+
+</head>
+
+<body>
+  <div class="login">
+    <h1 class="text-center">Ive chat</h1>
+    <div class="text-center">
+      <small>Welcome to Ive chat, please enter your username</small>
+    </div>
+    <br>
+    <div class="row">
+      <div class="container">
+        <div class="col-md-6 offset-md-3">
+          <form id="newuser">
+            <div class="form-group">
+              <label for="username">Username:</label>
+              <input type="text" class="form-control" id="username" placeholder="Enter your username here">
+            </div>
+            <button type="submit" class="btn btn-primary col-md-12">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="chat">
+    <div class="container">
+      <div class="col-md-6 offset-md-3">
+        <h1 id="title" class="text-center">Chat</h1>
+        <div id="chatbody">
+        </div>
+        <form id="sendmsg">
+          <div class="form-group">
+            <input id="msgbox" class="form-control" placeholder="Type your message here and press send to send it">
+          </div>
+          <button type="submit" class="btn btn-primary col-md-6 offset-md-3">Send</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="/js/mysocket.js"></script>
+
+</body>
+
+</html>
