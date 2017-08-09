@@ -7,8 +7,8 @@ const apport = 3000;
 var users = [];
 
 app.use(express.static('public'));
-server.listen(process.env.PORT || 3000);
-console.log('Express listening on port ' + port + '!');
+server.listen(process.env.PORT || apport);
+console.log('Express listening on port ' + apport + '!');
 
 io.on('connection', function(socket){
 
