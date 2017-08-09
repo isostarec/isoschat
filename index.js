@@ -6,6 +6,15 @@ const apport = 3000;
 
 var users = [];
 
+app.use(function (req, res, next){
+  if (req.headers['x-forwarded-proto'] === 'https') {
+    res.redirect('http://' + req.hostname + req.url);
+  } else {
+    next();
+  }
+});
+
+
 app.use(express.static('public'));
 server.listen(process.env.PORT || apport);
 console.log('Express listening on port ' + apport + '!');
