@@ -2,12 +2,12 @@ const express = require('express');
 const app = express();
 const server = require('http').Server(app);
 const io = require('socket.io')(server);
-const port = 3000;
+const apport = 3000;
 
 var users = [];
 
 app.use(express.static('public'));
-server.listen(port);
+server.listen(apport || process.env.PORT);
 console.log('Express listening on port ' + port + '!');
 
 io.on('connection', function(socket){
@@ -28,7 +28,7 @@ io.on('connection', function(socket){
       if(!msg){
         socket.emit('invalidmessage');
       } else {
-        io.sockets.emit('insertmsg', msg, socket.username);  
+        io.sockets.emit('insertmsg', msg, socket.username);
       }
     })
 
